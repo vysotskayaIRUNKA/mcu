@@ -16,11 +16,14 @@ add_executable(${PROJECT_NAME}
 	${CMAKE_CURRENT_SOURCE_DIR}/stdio-task/stdio-task.c
 	${CMAKE_CURRENT_SOURCE_DIR}/protocol-task/protocol-task.c
 	${CMAKE_CURRENT_SOURCE_DIR}/led-task/led-task.c
+	${CMAKE_CURRENT_SOURCE_DIR}/adc-task/adc-task.c
+
 )
 
 
 target_link_libraries(${PROJECT_NAME}
 	pico_stdlib
+	hardware_adc
 )
 
 pico_set_linker_script(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/linker_rp2040.ld)
