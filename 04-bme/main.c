@@ -78,7 +78,7 @@ int main()
 	i2c_init(i2c1, 100000);
 	gpio_set_function(14, GPIO_FUNC_I2C);
 	gpio_set_function(15, GPIO_FUNC_I2C);
-	bme280_init(i2c_read, i2c_write);
+	bme280_init(rp2040_i2c_read, rp2040_i2c_write);
 
 	while(1)
 	{
