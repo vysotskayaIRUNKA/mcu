@@ -74,7 +74,7 @@ int main()
 	stdio_task_init();
 	stdio_init_all();
 	protocol_task_init(device_api);
-	led_task_init();
+	led_task_init(i2c_read, i2c_write);
 	i2c_init(i2c1, 100000);
 	gpio_set_function(14, GPIO_FUNC_I2C);
 	gpio_set_function(15, GPIO_FUNC_I2C);
